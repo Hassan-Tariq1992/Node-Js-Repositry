@@ -37,7 +37,7 @@ exports.product_view=function(req,res)
 exports.product_update = function (req, res) {
     Product.findByIdAndUpdate(req.params.id, {$set: req.body}, function (err, product) {
         if (err) return console.log(err);
-        res.send('Product udpated.');
+        res.send('Product Updated.');
     });
 };
 
@@ -47,3 +47,15 @@ exports.product_delete = function (req, res) {
       res.send('Product Deleted Successfully');
     })
 };
+
+exports.product_list=function(req,res)
+{
+	Product.find({},function(err,products){
+			if(err)
+			{
+				console.log(err);
+			}
+		res.send(products);
+			//	res.render('../views/index.html',{products:products});
+	});
+}
