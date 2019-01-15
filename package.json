@@ -19,6 +19,9 @@
     "scripts": {
     "start": "node app.js"
   },
+    "assets": [
+"favicon.ico"
+],
     "async": {
       "version": "2.6.1",
       "resolved": "https://registry.npmjs.org/async/-/async-2.6.1.tgz",
