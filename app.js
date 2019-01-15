@@ -6,11 +6,10 @@ const mongoose=require('mongoose');
 //This will intiliaze an app
 var app=express();
 
-// app.get('/', (req, res) => {
-// 	res.sendFile(__dirname + '/views/index.html')
-// 	// Note: __dirname is directory that contains the JavaScript source code. Try logging it and see what you get!
-// 	// Mine was '/Users/zellwk/Projects/demo-repos/crud-express-mongo' for this app.
-//   })
+ app.get('/', (req, res) => {
+	res.sendFile(__dirname + '/views/index.html')
+ 	// Note: __dirname is directory that contains the JavaScript source code. Try logging it and see what you get! 	// Mine was '/Users/zellwk/Projects/demo-repos/crud-express-mongo' for this app.
+  })
   
 app.use('/scripts',express.static('scripts'));
 app.use('/css',express.static('css'));
