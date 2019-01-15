@@ -39,5 +39,5 @@ app.use('/products',product_routes);
 
 app.listen(process.env.PORT||port,()=>{
 	
-	console.log('App is running on port '+port);
+	 console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 }); 
