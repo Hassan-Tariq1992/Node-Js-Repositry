@@ -37,8 +37,7 @@ app.use('/products',product_routes);
 // //	console.log(req.body)
 // })
 
-
-app.listen(port,()=>{
+app.listen(process.env.PORT||port,()=>{
 	
 	console.log('App is running on port '+port);
 }); 
