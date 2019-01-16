@@ -7,10 +7,9 @@ const mongoose=require('mongoose');
 var app=express();
 
 // app.get('/', (req, res) => {
-// 	res.sendFile(__dirname + '/views/index.html')
-// 	// Note: __dirname is directory that contains the JavaScript source code. Try logging it and see what you get!
-// 	// Mine was '/Users/zellwk/Projects/demo-repos/crud-express-mongo' for this app.
-//   })
+	//res.sendFile(__dirname + '/views/index.html')
+ 	// Note: __dirname is directory that contains the JavaScript source code. Try logging it and see what you get! 	// Mine was '/Users/zellwk/Projects/demo-repos/crud-express-mongo' for this app.
+//  })
   
 app.use('/scripts',express.static('scripts'));
 app.use('/css',express.static('css'));
@@ -38,8 +37,7 @@ app.use('/products',product_routes);
 // //	console.log(req.body)
 // })
 
-
-app.listen(port,()=>{
+app.listen(process.env.PORT||port,()=>{
 	
-	console.log('App is running on port '+port);
+	 console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 }); 
