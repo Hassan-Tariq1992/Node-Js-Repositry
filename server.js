@@ -39,5 +39,8 @@ app.use('/products',product_routes);
 
 app.listen(process.env.PORT||port,()=>{
 	
+<<<<<<< HEAD
 	 console.log("Server is working");
+=======
+>>>>>>> f8f31ede83ab995dcf47483a135fbeec600e7fb1
 }); 
