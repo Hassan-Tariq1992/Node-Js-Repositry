@@ -1,4 +1,4 @@
-const Product = require('~/models/product.model');
+const Product = require('../models/product.model');
 exports.test=function(req,res){
 	res.send('Greeting from Test Controller!');
 	
