@@ -18,7 +18,6 @@ exports.product_create=function(req,res)
 		{
 			console.log(err);
 		}
-			res.send('Product saved Successfully');
 			res.send(product);
 
 	});
@@ -38,12 +37,14 @@ exports.product_view=function(req,res)
 exports.product_update = function (req, res) {
     Product.findByIdAndUpdate(req.params.id, {$set: req.body}, function (err, product) {
         if (err) return console.log(err);
+        res.send(product);
     });
 };
 
 exports.product_delete = function (req, res) {
     Product.findOneAndDelete(req.params.id, function (err,product) {
         if (err) return console.log(err);
+      res.send(product);
     })
 };
 exports.product_list=function(req,res)
