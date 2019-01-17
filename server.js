@@ -15,7 +15,7 @@ var app=express();
 app.use('/scripts',express.static('scripts'));
 app.use('/css',express.static('css'));
 app.use('/',express.static('views'));
-const cors=require('cors');
+
 app.use(cors());
 var port=1234;
 const product_routes=require('./routes/product.route');
