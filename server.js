@@ -6,7 +6,7 @@ const mongoose=require('mongoose');
 const cors=require('cors');
 //This will intiliaze an app
 var app=express();
-app.use(cors());
+
 // app.get('/', (req, res) => {
 	//res.sendFile(__dirname + '/views/index.html')
  	// Note: __dirname is directory that contains the JavaScript source code. Try logging it and see what you get! 	// Mine was '/Users/zellwk/Projects/demo-repos/crud-express-mongo' for this app.
@@ -15,7 +15,7 @@ app.use(cors());
 app.use('/scripts',express.static('scripts'));
 app.use('/css',express.static('css'));
 app.use('/',express.static('views'));
-const cors=require('cors');
+
 app.use(cors());
 var port=1234;
 const product_routes=require('./routes/product.route');
